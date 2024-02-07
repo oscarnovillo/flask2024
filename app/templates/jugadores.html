@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Jugadores{% endblock %}
+
+
+{% block content %}
+
+<form action="/verJugadores"  method="post">
+  <label
+    for="id_equipo">EQUIPO</label>
+    <select name="id_equipo" >
+      {% for equipo in equipos %}
+        <option value="{{equipo.id}}">{{equipo.nombre}}</option>
+      {% endfor %}
+    </select>
+  <input type="submit" value="Ver" />
+</form>
+
+<br/>
+<div style="align-content: center;" >
+  <h1>{{nombreEquipo}}</h1>
+</div>
+
+{% if jugadores %}
+<table border="1" style="width: 100%;">
+  <tr><td>ID</td><td>NOMBRE</td><td>ID_EQUIPO</td></tr>
+  {% for jugador in jugadores %}
+      <tr>
+        <td>{{ jugador.id }}</td> 
+        <td>{{ jugador.nombre }}</td> 
+        <td>{{ jugador.id_equipo }}</td>
+      </tr>
+     
+  {% endfor %}
+</table>
+
+{% else %}
+<h1>No hay jguadores</h1>
+
+{% endif %}
+
+
+
+{% endblock %}

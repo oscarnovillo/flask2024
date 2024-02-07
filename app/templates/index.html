@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+
+
+{% block content %}
+    <h1>CAMBIO NUEVO</h1>
+    <p class="important">
+      HOLA MUNDO
+    </p>
+    <a href="https://www.as.com">www.as.com</a>
+    <a href="{{ url_for('static',filename='static.html') }}">estatico</a>
+    <a href="{{ url_for('routes.verEquipos') }}">Test</a>
+    
+    <a href="{{ url_for('routes_jugadores.verJugadores') }}">jugadores</a>
+{% endblock %}
+
+{% block footer %}
+FOOTER desde index asdas
+
+asd asda sdasd 
+{% endblock %}
