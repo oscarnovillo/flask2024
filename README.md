@@ -7,7 +7,7 @@ cambio desde local
 
 cambio de Juan desde casa
 
-cambio Pepe desde la empresa
+cambio Jorge desde la empresa
 
 otro cambio PEPE
 
